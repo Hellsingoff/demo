@@ -58,7 +58,7 @@
 
                     <div class="py-2">
                         <x-input-label for="providers" :value="__('Провайдеры')"/>
-                        <select name="providers[]" id="providers"  class="select2 mt-1 block w-full">
+                        <select name="providers[]" id="providers" multiple class="select2 mt-1 block w-full">
                             @foreach($providers as $provider)
                                 <option value="{{ $provider->id }}"
                                         @if(in_array($provider->id, old('providers') ?? $supplyProviders)) selected @endif>{{ $provider->name }}</option>
